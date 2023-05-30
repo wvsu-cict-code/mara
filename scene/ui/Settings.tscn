@@ -1,0 +1,186 @@
+[gd_scene load_steps=17 format=3 uid="uid://b66fdn4n06321"]
+
+[ext_resource type="Script" path="res://script/Settings.gd" id="1_0bgxn"]
+[ext_resource type="PackedScene" uid="uid://dti5l02a82wpr" path="res://scene/levels/Bg.tscn" id="2_7fcq5"]
+[ext_resource type="Theme" uid="uid://n5qpekph3sg6" path="res://assets/gui/button_skin.tres" id="2_vnwqg"]
+[ext_resource type="Texture2D" uid="uid://cy1djpdeb36p1" path="res://assets/gui/SETTINGS.png" id="3_kvnld"]
+[ext_resource type="PackedScene" uid="uid://b3t3msfctp6ps" path="res://scene/ui/Volumecontrol.tscn" id="3_wlcby"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byih6"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(0, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3tg2"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(631, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqduo"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(1262, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc0he"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(1893, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr3tu"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(2524, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_024oq"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(3155, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3psmy"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(3786, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvqri"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(4417, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n70bq"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(5048, 0, 631, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e3gw"]
+atlas = ExtResource("3_kvnld")
+region = Rect2(5679, 0, 631, 199)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1srh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byih6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3tg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqduo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc0he")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xr3tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_024oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3psmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvqri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n70bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e3gw")
+}],
+"loop": true,
+"name": &"Settings",
+"speed": 8.0
+}]
+
+[node name="Settings" type="Node"]
+script = ExtResource("1_0bgxn")
+metadata/_edit_horizontal_guides_ = [0.0]
+metadata/_edit_vertical_guides_ = [128.0, 671.0, 339.0, 400.0]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_7fcq5")]
+move = true
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 129.0
+offset_right = -189.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.12, 1.17919)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+color = Color(0.572549, 0.376471, 0.27451, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BG"]
+position = Vector2(241.964, 55.1226)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_q1srh")
+animation = &"Settings"
+frame_progress = 0.0486034
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -33.0357
+offset_top = 99.2206
+offset_right = 32.9643
+offset_bottom = -63.7794
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BG/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Master" parent="BG/VBoxContainer" instance=ExtResource("3_wlcby")]
+layout_mode = 2
+
+[node name="Music" parent="BG/VBoxContainer" instance=ExtResource("3_wlcby")]
+layout_mode = 2
+label = "Music"
+bus_name = "Music"
+
+[node name="Sfx" parent="BG/VBoxContainer" instance=ExtResource("3_wlcby")]
+layout_mode = 2
+label = "SFX"
+bus_name = "SFX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.82143
+offset_top = 273.917
+offset_right = -11.1786
+offset_bottom = -15.0832
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Default" type="Button" parent="BG/HBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme = ExtResource("2_vnwqg")
+theme_override_font_sizes/font_size = 20
+text = "↺ Default"
+
+[node name="HSeparator2" type="HSeparator" parent="BG/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="saveNexit" type="Button" parent="BG/HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme = ExtResource("2_vnwqg")
+theme_override_font_sizes/font_size = 30
+text = "Go Back"
+
+[connection signal="pressed" from="BG/HBoxContainer/Default" to="." method="_on_default_pressed"]
+[connection signal="pressed" from="BG/HBoxContainer/saveNexit" to="." method="_on_save_nexit_pressed"]

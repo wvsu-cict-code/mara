@@ -1,0 +1,14 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://vsfwr81vmxhi"]
+
+[ext_resource type="FontFile" uid="uid://dodd1k8paa7jw" path="res://assets/fonts/VeniceBridge.otf" id="1_bvlw5"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_bvlw5")
+font_size = 60
+font_color = Color(0.407843, 1, 1, 1)
+outline_size = 1
+outline_color = Color(1, 1, 0.87451, 1)
+shadow_size = 7
+shadow_color = Color(0.0745098, 0.0235294, 0.121569, 0.843137)
+shadow_offset = Vector2(3, 2)

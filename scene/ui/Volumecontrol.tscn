@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3t3msfctp6ps"]
+
+[ext_resource type="FontFile" uid="uid://d1y1i3mcyceu" path="res://assets/fonts/Pixelme.ttf" id="1_32lbw"]
+[ext_resource type="Script" path="res://script/Volumecontrol.gd" id="1_utwbl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_84iny"]
+line_spacing = 0.0
+font = ExtResource("1_32lbw")
+font_size = 20
+
+[sub_resource type="Gradient" id="Gradient_lauyf"]
+colors = PackedColorArray(0, 0, 0, 1, 0.00139673, 0.00139673, 0.00139673, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hih5q"]
+gradient = SubResource("Gradient_lauyf")
+width = 15
+height = 15
+
+[sub_resource type="Gradient" id="Gradient_v7tyf"]
+colors = PackedColorArray(0.192157, 0.192157, 0.192157, 1, 0.193154, 0.193154, 0.193154, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ahk3f"]
+gradient = SubResource("Gradient_v7tyf")
+width = 15
+height = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1pusn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rl8ts"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="MastersContainer" type="HBoxContainer" groups=["Persist"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -102.0
+offset_bottom = -380.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 2
+script = ExtResource("1_utwbl")
+label = "Master"
+bus_name = "Master"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_84iny")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_hih5q")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_ahk3f")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1pusn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_rl8ts")
+min_value = -20.0
+max_value = 0.0
+value = -10.0
+rounded = true
+
+[node name="Perc" type="Label" parent="."]
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_84iny")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Delay" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_masters_slider_value_changed"]
+[connection signal="timeout" from="Delay" to="." method="_on_delay_timeout"]

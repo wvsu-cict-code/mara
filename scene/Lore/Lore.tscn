@@ -1,0 +1,937 @@
+[gd_scene load_steps=46 format=3 uid="uid://b3rghb8s5gev3"]
+
+[ext_resource type="Script" path="res://script/Lore.gd" id="1_h1f5f"]
+[ext_resource type="Texture2D" uid="uid://3vc8ob1cyfbk" path="res://assets/gui/CHAPTER-1.png" id="3_eomey"]
+[ext_resource type="Texture2D" uid="uid://cufo03cgo7l7d" path="res://assets/gui/PROLOGUE-FAITH.png" id="3_mnmpi"]
+[ext_resource type="StyleBox" uid="uid://ifgbhuuw0cyc" path="res://Scroll_style.tres" id="3_ogf4a"]
+[ext_resource type="FontFile" uid="uid://d1y1i3mcyceu" path="res://assets/fonts/Pixelme.ttf" id="3_voxas"]
+[ext_resource type="Texture2D" uid="uid://ig4f0vb6ei7h" path="res://assets/gui/CHAPTER-2.png" id="4_50p17"]
+[ext_resource type="PackedScene" uid="uid://dti5l02a82wpr" path="res://scene/levels/Bg.tscn" id="4_qur73"]
+[ext_resource type="Theme" uid="uid://n5qpekph3sg6" path="res://assets/gui/button_skin.tres" id="8_yx5mk"]
+[ext_resource type="Texture2D" uid="uid://bnxq8m651px2" path="res://assets/gui/IDLE/LEFT MOVEMENT.png" id="9_nwy5s"]
+[ext_resource type="Texture2D" uid="uid://dy43jafwbxidp" path="res://assets/gui/IDLE/RIGHT MOVEMENT.png" id="10_ylv1s"]
+
+[sub_resource type="Animation" id="Animation_sr75a"]
+resource_name = "Chapter1"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/ColorRect2/ScrollContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/ColorRect2/ScrollContainer3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(27, 88)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/ColorRect2/ScrollContainer5:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/ColorRect2/ScrollContainer3:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(450, 300)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect/ColorRect2/ScrollContainer3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_y01nh"]
+resource_name = "Chapter2"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/ColorRect2/ScrollContainer3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/ColorRect2/ScrollContainer5:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/ColorRect2/ScrollContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/ColorRect2/ScrollContainer5:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(450, 300)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect/ColorRect2/ScrollContainer5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(26, 88)]
+}
+
+[sub_resource type="Animation" id="Animation_t0iww"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/ColorRect2/ScrollContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/ColorRect2/ScrollContainer5:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/ColorRect2/ScrollContainer:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(450, 300)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/ColorRect2/ScrollContainer3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect/ColorRect2/ScrollContainer:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(26, 88)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c4at2"]
+_data = {
+"Chapter1": SubResource("Animation_sr75a"),
+"Chapter2": SubResource("Animation_y01nh"),
+"RESET": SubResource("Animation_t0iww")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6yca"]
+atlas = ExtResource("3_eomey")
+region = Rect2(0, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alil6"]
+atlas = ExtResource("3_eomey")
+region = Rect2(711, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpqbm"]
+atlas = ExtResource("3_eomey")
+region = Rect2(1422, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywt5e"]
+atlas = ExtResource("3_eomey")
+region = Rect2(2133, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suidh"]
+atlas = ExtResource("3_eomey")
+region = Rect2(2844, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xpwg"]
+atlas = ExtResource("3_eomey")
+region = Rect2(3555, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwqav"]
+atlas = ExtResource("3_eomey")
+region = Rect2(4266, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slx21"]
+atlas = ExtResource("3_eomey")
+region = Rect2(4977, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4vup"]
+atlas = ExtResource("3_eomey")
+region = Rect2(5688, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0v0i"]
+atlas = ExtResource("3_eomey")
+region = Rect2(6399, 0, 711, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ipt0"]
+atlas = ExtResource("4_50p17")
+region = Rect2(0, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgrug"]
+atlas = ExtResource("4_50p17")
+region = Rect2(695, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aruu"]
+atlas = ExtResource("4_50p17")
+region = Rect2(1390, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w5gh"]
+atlas = ExtResource("4_50p17")
+region = Rect2(2085, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq4vm"]
+atlas = ExtResource("4_50p17")
+region = Rect2(2780, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pvnp"]
+atlas = ExtResource("4_50p17")
+region = Rect2(3475, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul1tx"]
+atlas = ExtResource("4_50p17")
+region = Rect2(4170, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvvou"]
+atlas = ExtResource("4_50p17")
+region = Rect2(4865, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf4m6"]
+atlas = ExtResource("4_50p17")
+region = Rect2(5560, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31cl6"]
+atlas = ExtResource("4_50p17")
+region = Rect2(6255, 0, 695, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0a7a"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(0, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts0ww"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(1095, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oioyv"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(2190, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7v38"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(3285, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytfm1"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(4380, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptvrg"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(5475, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qleg"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(6570, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x1gn"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(7665, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k55nr"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(8760, 0, 1095, 199)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_facdu"]
+atlas = ExtResource("3_mnmpi")
+region = Rect2(9855, 0, 1095, 199)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f66t3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6yca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alil6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpqbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywt5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suidh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xpwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwqav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slx21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4vup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0v0i")
+}],
+"loop": true,
+"name": &"Chapter1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ipt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgrug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4aruu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w5gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq4vm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pvnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul1tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvvou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf4m6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31cl6")
+}],
+"loop": true,
+"name": &"Chapter2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0a7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts0ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oioyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7v38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytfm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptvrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qleg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x1gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k55nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_facdu")
+}],
+"loop": true,
+"name": &"Prologue",
+"speed": 8.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h1f5f")
+metadata/_edit_vertical_guides_ = [181.0, 626.0]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("4_qur73")]
+process_mode = 3
+scroll_ignore_camera_zoom = true
+move = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c4at2")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(800, 400)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 800.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.72549, 0.329412, 0.239216, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect/ColorRect2"]
+position = Vector2(250, 48)
+scale = Vector2(0.482412, 0.40201)
+sprite_frames = SubResource("SpriteFrames_f66t3")
+animation = &"Prologue"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ColorRect2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = 88.0
+offset_right = 226.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_ogf4a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ColorRect2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="ColorRect/ColorRect2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_voxas")
+theme_override_font_sizes/font_size = 16
+text = "
+Mara and her mother Emunah,
+are in a small clearing within The
+Hanged Garden. It is 4:00 in morning,
+and the full moon is just barely visible,
+its light breaching through the misty
+tree line. 
+
+Mara: Why do we always have to do this
+early in the morning? I’m barely even awake,
+and I’m sure the spirits are too.
+
+Emunah: The spirits are restless, Mara, and
+the rest of the world’s lack of faith in them
+is not helping that. This is the least we can
+do for them – for what they have done for us. 
+
+	  Now, kindly get that spirit stone back
+to where it belongs. The moon is setting soon,
+and we won’t be able to perform the ritual.
+
+Mara inspects the spirit stone, noticing that it
+has a full moon carved on one side. She
+pushes it towards a circle of stones, each
+marked with a phase of the moon, making
+sure that her stone’s carving is facing towards
+the others. The ritual begins shortly after, as
+Emunah stands outside the circle and invokes
+the moon. As the fading moonlight bathes the
+clearing, the stones glow, before unleashing a
+bright space pulse that spreads through the forest.
+
+After Emunah finishes the ritual at the break of
+dawn, she and Mara prepare to leave when
+they hear loud noises coming from the edge of
+the forest. Emunah wants to investigate the
+disturbance, to which Mara insists on coming
+with her.
+
+Mara: Looks like the spirits are angry. Did we do
+something wrong?
+
+Emunah: That was not the work of a spirit. I
+Have heard that sound before, and it only
+means trouble.
+
+Mara: Why? What is it? 
+
+Emunah: Listen to me Mara, you need to go
+home now and start preparing the things that
+we need to invoke a spirit. I will come home
+in the morning – and do not leave the house.
+
+Mara: You still haven’t answered my questions. 
+I’m coming with you, whether you like it or not.
+
+Emunah: I do not like it, and you will not. Go
+home. Prepare. Lock up. 
+Please, Mara. Go. Now. 
+
+Mara hears the concern in her mother’s voice
+and sees the fear in her eyes. She wants to know
+what’s going on, but decides to listen to her,
+running in the opposite direction, towards their
+home. As she does, she trips on one of the spirit
+stones, displacing the one carved with a lunar eclipse.
+She hastily puts it back, and runs home – the loud
+noises reverberating from behind her.
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer3" type="ScrollContainer" parent="ColorRect/ColorRect2"]
+visible = false
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -223.0
+offset_top = 88.0
+offset_right = 227.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_ogf4a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ColorRect2/ScrollContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="ColorRect/ColorRect2/ScrollContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_voxas")
+theme_override_font_sizes/font_size = 16
+text = "
+Mara manages to return home as the dawn
+breaks. She opens the door and instantly goes
+to her mother’s room, hurriedly rummaging
+through the cabinets, looking for the things
+that she needs to invoke a spirit.
+Mara: Good spirits, good spirits.
+Think Mara, think!
+
+…
+
+Aha! The Elder Nightwood Branch and
+a Hallowed Hyacinth.
+
+Mara finds The Elder Nightwood Branch and
+Hallowed Hyacinth in her mother’s cabinets.
+She takes them out, and runs to their living
+room, placing the items on the altar just as
+her mother had instructed her. She waits
+for her until 9:00 in the morning, and when
+she still does not return, Mara performs
+the ritual herself.
+
+Mara: I invoke thy names, Children of The
+Hanged Garden… I-I, Mara, your servant, desire
+an audience with thee. Hear my plea,
+and come in peace.
+
+The wind stills, and Mara waits, and waits.
+She curls into the fetal position as a sense of
+both fear and hopelessness wash over her.
+
+Suddenly, the winds pick up again and Mara
+feels an unnaturally cold gust pass through her.
+Returning to the kneeling position, she calls to
+the spirit she knows she has just summoned,
+a sense of pride, tinged with hope in her voice.
+
+Mara: W-who are… I mean, O, Child of The
+Hanged Garden, my many thanks to thee.
+
+Hutik: I am Hutik, spirit of whispers, and
+I have heard thy prayer, Mara.
+
+Mara: My mother Enumah, she-
+
+Hutik: Has not returned home, and thou art
+worried for her safety?
+
+Mara: Y-yes, can… Canst thou assist me, O spirit
+of whispers?
+
+Hutik: That and many more, Mara.
+Now, make haste, for we shall depart. We shan’t
+waste any time.
+
+Mara: I-I have to get something first.
+
+Mara runs into her room, grabbing her cloak
+from her bed, and rushes out of the house. The
+cloak was old, it was her mother’s from when
+she was a girl her age and had been used as a
+ceremonial garb. Mara on the other hand has made
+a habit of neglecting it, finding it too
+uncomfortable and necessary. However, now that
+her mother is missing, she feels as though she
+needs to bring and wear it - for her.
+
+Hutik: I had noticed that thou were not wearing
+the ceremonial garb when thou had
+summoned me. Why?
+
+Mara: I don- I do not usually wear it. It is too
+big for me, and besides, I believe that there is
+so much more to faith than what you wear.
+
+Hutik: Interesting…
+
+With Hutik as her guide, Mara leaves the safety
+of her house and ventures into depths of The
+Hanged Garden, jumping over rocks and crawling
+under logs along the way.
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer5" type="ScrollContainer" parent="ColorRect/ColorRect2"]
+visible = false
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = 88.0
+offset_right = 226.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_ogf4a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ColorRect2/ScrollContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="ColorRect/ColorRect2/ScrollContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_voxas")
+theme_override_font_sizes/font_size = 16
+text = "
+(Above Ground Path)
+
+Mara stumbles through the dense woodland.
+She has lived in The Hanged Garden all her life,
+but has never gone this deep into it before. She
+climbs a fallen tree, arriving on top of a small
+hill where she notices a rock, poking out of the
+thick shrubbery and approaches it, and as she
+does, she realizes that it is carved, much like the
+ones that her mother used the night before.
+However, instead of the phases of the moon this
+one is carved with the sun. Intrigue washes over
+her face, which Hutik immediately notices.
+
+Hutik: Thy ancestors once lived deep in The Hanged
+Garden. They were one with both the spirits and
+the nature around them. However –
+
+Mara: Some began to lose faith in the spirits and
+left the forest. They- my apologies.
+
+Hutik: Go on, I am interested to see how much
+thou truly knows about thy history.
+
+Mara: Th-they began building settlements, towns,
+and then cities, which drew more and more
+people out of The Hanged Garden, until only a
+faithful few remained. And now, it is only my
+m-mother and I.
+
+Hutik: Indeed, now it is only thy mother and
+thee, fulfilling thy purpose to The Hanged Garden.
+A purpose that many have attempted to flee from,
+yet always find themselves serving.
+
+(Underground Path – Optional / Hidden Location)
+
+Mara begins climbing a fallen tree that serves as
+a bridge between the forest floor and a small
+hill that looms over her. However, unbeknownst
+to both her and Hutik, the tree has been
+weathered and breaks as she is climbing it. Mara
+falls into a small underground cavern, with its
+walls covered by plant root and bone. She
+stumbles around in the dark until her hand grazes
+a hard surface, which slowly begins to hum and
+emit a faint light.
+
+Mara hears Hutik stifle a gasp, which surprises
+her, but as her eyes adjust to the growing
+brightness, she realizes why. The light reveals a
+partially covered stone mural, with the visible parts
+depicting The Elder Nightwood and two vaguely
+humanoid figures. Mara notes that one figure seems
+to be emerging from the ground like a plant, while the
+other one has a large chimaeric body. Both of their
+faces however are hidden beneath large and
+immovable plant roots.
+
+Mara: W-who… What is all of this?
+
+Mara asks Hutik a question but he remains silent, 
+until Mara, ever-stubborn, and seeming to forget
+that she is talking to a spirit, asks him again, this
+time raising her voice. Hutik, uncharacteristically
+answers with hesitation.
+
+Mara: What. Is. All of this?
+W-who are those in-
+My sincerest apologies, O Child of The
+Hanged Garden. I-
+
+Hutik: I accept thy apology, Mara. But thou must
+remember that there are myriad spirits that
+inhabit The Hanged Garden, some older than I.
+
+I-I am spirit of much youth, and many events
+have transpired long before I awoke. I do not know
+what the mural means, and I doubt that it will
+be of much help in locating thy matron.
+
+Mara: B- I understand, O spirit.
+
+Mara knows that Hutik is hiding something from
+her, especially regarding the stone mural and its
+content. However, she also knows that antagonizing,
+or worse, angering, the only spirit who answered her
+prayer only hurts her chances of finding her mother.
+
+The thought of her mother, and Hutik’s ominous tone
+are enough to make Mara continue in silence.  As the
+pair continue to trudge through the forest Mara finds
+herself bouncing off of Ghast Caps, and pushing
+branches, logs, and rocks out of her path.
+
+Eventually, they stumble into a clearing, and the
+light of sun, now at its zenith bathes it in blinding
+and hot light. Mara looks around the clearing, until
+Hutik points her to a patch of suspiciously fresh dirt.
+A sense of dread washes over Mara, and she
+hesitatingly approaches it.  She kneels down, and claws
+at the ground, scooping up clumps of dirt until she
+unearths her mother’s dead body, noticing that the
+left side of her head had been cracked open.
+
+Grabbing onto her mother’s cloak, Mara curls into
+the fetal position and breaks down, crying. Hutik
+stays silent during all of this, seemingly apathetic to
+Mara’s grief. After she spends some time crying,
+Mara stops, and slowly begins to stand up, wiping
+the tears off her face. Mara looks at her mother’s
+corpse forlornly, not knowing what to do as she has
+never seen a, and never been required to perform
+a ritual for death.
+
+Mara: I- I’m so sorry mother. I couldn’t save you. If
+only you- if only I went you, maybe this wouldn’t
+have happened.
+I- I failed you. I’m so sorry.
+
+Hutik continues to stay silent, observing Mara
+and her actions, as she begins to scour the
+clearing and the nearby woods,
+clearly looking for something.
+
+Mara: Mother’s love… What was it again?
+Think, Mara.
+Carmine Carnation, that’s it!
+
+Mara looks around and spots a field of Carmine
+Carnations, quickly rushing to, and picking one
+of the flowers. Shen then slowly approaches her
+mother’s corpse, and lays the Carmine Carnation
+on her left breast, before uttering a simple prayer
+which she has come up with on the stop.
+
+Mara: Enumah, my mother. I thank you for
+everything, may your soul find peace. M-
+
+Hutik: Enumah, Mara’s matron, I thank thee for
+thy service.
+May thy soul find peace, and serve its purpose in death.
+
+As the pair finish their ritualistic elegy the Carmin
+ Carnation begins to grow, wrapping Enumah’s
+corpse in its petals before exploding. Mara looks on
+in awe as The Hanged Garden takes its course,
+granting her mother peace. However, Mara knows
+that she herself will remain restless as long as her
+questions remain unanswered; “What was the noise
+that they heard coming from the edge of the forest?”,
+“Why was her mother so concerned?”, and
+“Did it have anything to do with her death?”.
+
+Suddenly, Mara sees multiple impressions in the dirt
+which she, in her grief, had not noticed before. Her
+eyes follow the direction that they seem to have come
+from and returned to, and both anger and resolve
+find their way into her hollowed heart.
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 80.0
+theme = ExtResource("8_yx5mk")
+theme_override_fonts/font = ExtResource("3_voxas")
+theme_override_font_sizes/font_size = 20
+text = "BACK"
+
+[node name="Prev" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.0
+offset_top = -32.0
+offset_right = -232.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+icon = ExtResource("9_nwy5s")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Next" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 240.0
+offset_top = -32.0
+offset_right = 304.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("10_ylv1s")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="CanvasLayer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/Prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]

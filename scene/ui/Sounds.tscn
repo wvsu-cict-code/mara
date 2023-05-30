@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://5mcr05agbd4e"]
+
+[ext_resource type="AudioStream" uid="uid://c38gfk7t2u6jt" path="res://assets/Sounds/BgMusic/Main Theme Attempt1.mp3" id="1_v8yoa"]
+[ext_resource type="AudioStream" uid="uid://ds62ny7wia7f4" path="res://assets/Sounds/Footsteps/woodpanel3.wav" id="2_4mg5t"]
+[ext_resource type="Script" path="res://script/Sounds.gd" id="2_uyyqg"]
+[ext_resource type="AudioStream" uid="uid://nddnhx3p67ko" path="res://assets/Sounds/BgMusic/Main Theme Attempt2.mp3" id="3_d44b2"]
+[ext_resource type="AudioStream" uid="uid://85wwymlje85f" path="res://assets/Sounds/Pop_Up.wav" id="5_fbgx8"]
+[ext_resource type="AudioStream" uid="uid://dg8mpevnrb5f3" path="res://assets/Sounds/swoosh #4.mp3" id="6_rjhpp"]
+[ext_resource type="AudioStream" uid="uid://ralfa2ga3g3i" path="res://assets/Sounds/Whoosh_01.wav" id="6_w6dbo"]
+
+[node name="Sounds" type="Node"]
+process_mode = 3
+script = ExtResource("2_uyyqg")
+
+[node name="Main1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_v8yoa")
+bus = &"Music"
+
+[node name="Main2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_d44b2")
+bus = &"Music"
+
+[node name="BSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4mg5t")
+volume_db = -10.0
+pitch_scale = 7.0
+bus = &"SFX"
+
+[node name="Pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fbgx8")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="Starts" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rjhpp")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="Drop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_w6dbo")
+volume_db = -10.0
+bus = &"SFX"
+
+[connection signal="finished" from="Main1" to="." method="_on_main_1_finished"]
+[connection signal="finished" from="Main2" to="." method="_on_main_2_finished"]

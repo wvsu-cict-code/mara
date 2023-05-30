@@ -1,0 +1,380 @@
+[gd_scene load_steps=29 format=3 uid="uid://djy0svox2nljy"]
+
+[ext_resource type="Texture2D" uid="uid://cgyy8yamck5op" path="res://assets/Background/altarroom.png" id="1_1is3n"]
+[ext_resource type="Script" path="res://script/Mara'sHouseScene.gd" id="1_o858k"]
+[ext_resource type="Texture2D" uid="uid://grxy6jcbtl4q" path="res://assets/characters/EmunahIdle-Sheet.png" id="2_7r56g"]
+[ext_resource type="Texture2D" uid="uid://dvs1de11es64f" path="res://assets/Background/altar ni blaise.png" id="3_ck0yt"]
+[ext_resource type="PackedScene" uid="uid://deu4nwi50s2ce" path="res://scene/ui/IngameButton.tscn" id="4_m06rj"]
+[ext_resource type="PackedScene" uid="uid://57j6skd0ywau" path="res://scene/character/Player.tscn" id="5_338sh"]
+[ext_resource type="PackedScene" uid="uid://b7ve7w4dolpsk" path="res://scene/levels/Bedroom.tscn" id="7_oboeu"]
+[ext_resource type="Texture2D" uid="uid://bi3ugun0nnjlc" path="res://assets/gui/IDLE/Pick.png" id="7_ps0al"]
+[ext_resource type="Texture2D" uid="uid://dffq6wre2hdfa" path="res://assets/gui/PRESSED/Drop.png" id="8_ehtm4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kloj8"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h4x4"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmiu1"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ud8v"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ic1x"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m651k"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lvb5"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcpdw"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm6ci"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osqi6"]
+atlas = ExtResource("2_7r56g")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77rqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kloj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h4x4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmiu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ud8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ic1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m651k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lvb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcpdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm6ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osqi6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4kos"]
+size = Vector2(13.4199, 31.4962)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oimb"]
+size = Vector2(4058, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4cyl"]
+size = Vector2(119, 316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db8a8"]
+size = Vector2(53, 179)
+
+[sub_resource type="Animation" id="Animation_yf4ir"]
+resource_name = "ToSecond"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-850, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bedroom/DownStairs:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(153, 168)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bedroom:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jj3to"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bedroom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(864, 8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bedroom/DownStairs:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(153, 168)]
+}
+
+[sub_resource type="Animation" id="Animation_wqqn5"]
+resource_name = "ToFirst"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bedroom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(864, 8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bedroom/DownStairs:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(153, 168)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6krta"]
+_data = {
+"RESET": SubResource("Animation_jj3to"),
+"ToFirst": SubResource("Animation_wqqn5"),
+"ToSecond": SubResource("Animation_yf4ir")
+}
+
+[node name="AltarRoom" type="Node2D"]
+process_mode = 1
+position = Vector2(0, 8)
+script = ExtResource("1_o858k")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Altarroom" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(400, 193)
+texture = ExtResource("1_1is3n")
+
+[node name="Emunah" type="AnimatedSprite2D" parent="CanvasGroup"]
+position = Vector2(201, 184)
+scale = Vector2(3.57813, 3.57813)
+sprite_frames = SubResource("SpriteFrames_77rqt")
+frame_progress = 0.361337
+
+[node name="Area2D" type="Area2D" parent="CanvasGroup/Emunah"]
+position = Vector2(0.279476, -6.42795)
+scale = Vector2(1.1441, 1.1441)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/Emunah/Area2D"]
+position = Vector2(-2.19847, 17.458)
+shape = SubResource("RectangleShape2D_w4kos")
+
+[node name="AltarNiBlaise" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(399, 236)
+scale = Vector2(0.29375, 0.29375)
+texture = ExtResource("3_ck0yt")
+
+[node name="Borders(limit)" type="StaticBody2D" parent="CanvasGroup"]
+position = Vector2(0, -6.10352e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/Borders(limit)"]
+position = Vector2(1155, 328)
+shape = SubResource("RectangleShape2D_2oimb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasGroup/Borders(limit)"]
+polygon = PackedVector2Array(-3, 315, 1, -10.9999, 799, -8.99994, 800, 316, 847, 476, 856, -57.9999, -41, -59.9999, -40, 468)
+
+[node name="Stairs" type="Area2D" parent="CanvasGroup"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/Stairs"]
+position = Vector2(43, 147)
+shape = SubResource("RectangleShape2D_m4cyl")
+
+[node name="Outside" type="Area2D" parent="CanvasGroup"]
+position = Vector2(792, 161)
+scale = Vector2(4.09374, 4.09374)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/Outside"]
+position = Vector2(-1.95419, 22.7176)
+shape = SubResource("RectangleShape2D_w4kos")
+
+[node name="InteractButtons" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="goUp" type="TextureButton" parent="InteractButtons"]
+visible = false
+offset_left = 640.0
+offset_top = 312.0
+offset_right = 704.0
+offset_bottom = 376.0
+action_mode = 0
+texture_normal = ExtResource("7_ps0al")
+texture_pressed = ExtResource("8_ehtm4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InteractButtons/goUp"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+text = "Up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="goDown" type="TextureButton" parent="InteractButtons"]
+visible = false
+offset_left = 640.0
+offset_top = 312.0
+offset_right = 704.0
+offset_bottom = 376.0
+action_mode = 0
+texture_normal = ExtResource("7_ps0al")
+texture_pressed = ExtResource("8_ehtm4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InteractButtons/goDown"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+text = "Down"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="goOut" type="TextureButton" parent="InteractButtons"]
+visible = false
+offset_left = 640.0
+offset_top = 312.0
+offset_right = 704.0
+offset_bottom = 376.0
+action_mode = 0
+texture_normal = ExtResource("7_ps0al")
+texture_pressed = ExtResource("8_ehtm4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InteractButtons/goOut"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+text = "Out "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bedroom" parent="." instance=ExtResource("7_oboeu")]
+position = Vector2(864, 8)
+
+[node name="DownStairs" type="Area2D" parent="Bedroom"]
+position = Vector2(153, 168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom/DownStairs"]
+position = Vector2(-112, 48.5)
+shape = SubResource("RectangleShape2D_db8a8")
+
+[node name="Player" parent="." instance=ExtResource("5_338sh")]
+position = Vector2(745, 213)
+scale = Vector2(6, 6)
+collision_layer = 129
+speed = 150.0
+can_pick = false
+
+[node name="IngameButton" parent="." instance=ExtResource("4_m06rj")]
+layer = 10
+disable_pick_button = true
+
+[node name="Cammove" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6krta")
+}
+
+[connection signal="body_entered" from="CanvasGroup/Stairs" to="." method="_on_stairs_body_entered"]
+[connection signal="body_exited" from="CanvasGroup/Stairs" to="." method="_on_stairs_body_exited"]
+[connection signal="body_entered" from="CanvasGroup/Outside" to="." method="_on_outside_body_entered"]
+[connection signal="body_exited" from="CanvasGroup/Outside" to="." method="_on_outside_body_exited"]
+[connection signal="pressed" from="InteractButtons/goUp" to="." method="_on_go_up_pressed"]
+[connection signal="pressed" from="InteractButtons/goDown" to="." method="_on_go_down_pressed"]
+[connection signal="pressed" from="InteractButtons/goOut" to="." method="_on_go_out_pressed"]
+[connection signal="body_entered" from="Bedroom/DownStairs" to="." method="_on_down_stairs_body_entered"]
+[connection signal="body_exited" from="Bedroom/DownStairs" to="." method="_on_down_stairs_body_exited"]

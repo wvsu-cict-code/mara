@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7ve7w4dolpsk"]
+
+[ext_resource type="Texture2D" uid="uid://cl27ajwhltstx" path="res://assets/Background/HutInteriorBG03.png" id="1_iqm0n"]
+[ext_resource type="Texture2D" uid="uid://brsmgs0ntd0vx" path="res://assets/Background/Cabinet frontview.png" id="2_26kvl"]
+[ext_resource type="Texture2D" uid="uid://bm3qto54aqyhl" path="res://assets/Background/bed ni blaise.png" id="3_40vjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qy4qi"]
+size = Vector2(224.865, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oimb"]
+size = Vector2(4058, 20)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwrky"]
+blend_mode = 3
+light_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[node name="Bedroom" type="Node2D"]
+process_mode = 1
+position = Vector2(0, 8)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Altarroom" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(400, 193)
+texture = ExtResource("1_iqm0n")
+
+[node name="CabinetFrontview" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(336, 217)
+scale = Vector2(8.75, 8.75)
+texture = ExtResource("2_26kvl")
+
+[node name="BedNiBlaise" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(687.5, 252)
+scale = Vector2(0.925, 0.925)
+texture = ExtResource("3_40vjc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CanvasGroup/BedNiBlaise"]
+position = Vector2(0, -6.10352e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/BedNiBlaise/StaticBody2D"]
+position = Vector2(9.18909, -12.9729)
+shape = SubResource("RectangleShape2D_qy4qi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CanvasGroup"]
+position = Vector2(0, -6.10352e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/StaticBody2D"]
+position = Vector2(2019, 328)
+shape = SubResource("RectangleShape2D_2oimb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasGroup/StaticBody2D"]
+polygon = PackedVector2Array(-3, 315, 1, -10.9999, 799, -8.99994, 800, 316, 847, 476, 856, -57.9999, -41, -59.9999, -44, 389)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasGroup"]
+material = SubResource("CanvasItemMaterial_nwrky")
+offset_top = 246.0
+offset_right = 58.0
+offset_bottom = 338.0
+scale = Vector2(0.909654, 1)
+color = Color(0.184314, 0.184314, 0.184314, 1)
+metadata/_edit_group_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
